@@ -10,4 +10,5 @@ ENV USER=root PASSWORD=root  DBNAME=root
 
 COPY ./main main
 
+
 ENTRYPOINT [ "./main" ]
