@@ -9,13 +9,12 @@ on:
 jobs:
 
   test:
-    runs-on: ${{ matrix.os }}
-     env:
-      HOST: localhost
-      PORT: 5432
+    runs-on: ${{ matrix.os}}
+    env:
       USER: root
       PASSWORD: root
       DBNAME: root
+      PORT: 5432
     strategy:
       matrix:
         go_version: ['1.18', '1.17', '>=1.18']
