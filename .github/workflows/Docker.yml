@@ -22,3 +22,12 @@ jobs:
         username: rafaelsantana14
     # Password or personal access token used to log against the Docker registry
         password: ${{ secrets.SENHA_DOCKER }}
+
+
+    - name: Build and push Docker images
+      uses: docker/build-push-action@v6.18.0
+      with:
+        context: .
+        file: ./Dockerfile
+        push: true
+        tags: rafaelsantana14/go_ci:${{github.ref_name}}
